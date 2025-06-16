@@ -28,6 +28,7 @@ Frees the memory allocated for an `AVCodecParameters` structure.
 * C compiler (e.g., gcc or clang)
 
 ## AVCodecParameters
+
 |enum AVMediaType 	|codec_type | 	General type of the encoded data. More...|
  
 enum AVCodecID 	codec_id

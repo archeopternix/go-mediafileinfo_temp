@@ -29,7 +29,9 @@ Frees the memory allocated for an `AVCodecParameters` structure.
 
 ## AVCodecParameters
 
-|enum AVMediaType 	|codec_type | 	General type of the encoded data. More...|
+| Type             | Name      | Description                                 |
+|------------------|-----------|---------------------------------------------|
+|enum AVMediaType 	|codec_type | 	General type of the encoded data. More...  |
  
 enum AVCodecID 	codec_id
  	Specific type of the encoded data (the codec used). More...

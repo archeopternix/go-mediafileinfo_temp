@@ -13,10 +13,12 @@ AVCodecParameters* create_codec_parameters(void);
 void free_codec_parameters(AVCodecParameters* params);
 ```
 
-* create_codec_parameters
+### create_codec_parameters
+
 Allocates and initializes an `AVCodecParameters` structure.
 
-* free_codec_parameters
+### free_codec_parameters
+
 Frees the memory allocated for an `AVCodecParameters` structure.
 
 ## Requirements

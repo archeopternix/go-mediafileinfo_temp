@@ -14,13 +14,13 @@ void free_codec_parameters(AVCodecParameters* params);
 ```
 
 * create_codec_parameters
-Allocates and initializes an AVCodecParameters structure.
+Allocates and initializes an `AVCodecParameters` structure.
 
 * free_codec_parameters
-Frees the memory allocated for an AVCodecParameters structure.
+Frees the memory allocated for an `AVCodecParameters` structure.
 
 ## Requirements
 
-FFmpeg/libavcodec development libraries installed
-Go (for usage within the go-mediafileinfo project)
-C compiler (e.g., gcc or clang)
+* FFmpeg/libavcodec development libraries installed
+* Go (for usage within the go-mediafileinfo project)
+* C compiler (e.g., gcc or clang)

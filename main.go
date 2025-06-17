@@ -1,19 +1,26 @@
 package main
 
 import (
-    "fmt"
-    "avwrapper"
+	"fmt"
+	"avwrapper"
 )
 
 func main() {
-    sp := avwrapper.NewSmartAVCodecParameters()
-    if sp == nil {
-        panic("failed to allocate codec parameters")
-    }
+	p := avwrapper.NewSmartAVCodecParameters()
+	if p == nil {
+		panic("allocation failed")
+	}
 
-    fmt.Printf("Codec: %s\n", sp.CodecName())
-    fmt.Printf("Resolution: %dx%d\n", sp.Width(), sp.Height())
-    fmt.Printf("Bitrate: %d\n", sp.BitRate())
+	// Zugriff auf Felder (nur lesen!)
+	fmt.Println("Bitrate:", p.BitRate())
+	fmt.Println("Resolution:", p.Width(), "x", p.Height())
 
-    // Kein manuelles Free nötig
+	// Direkter Zugriff (unsafe, aber erlaubt):
+	raw := p.Ptr()
+	raw.bit_rate = 500000
+	raw.width = 1280
+	raw.height = 720
+
+	fmt.Println("Updated Bitrate:", p.BitRate())
+	fmt.Println("Updated Resolution:", p.Width(), "x", p.Height())
 }

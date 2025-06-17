@@ -4,7 +4,7 @@
 
 #include <libavcodec/avcodec.h>
 
-AVCodecParameters* create_codec_parameters(void);
+AVCodecParameters* get_video_codec_parameters(const char *filename);
 void free_codec_parameters(AVCodecParameters* params);
 
 #endif

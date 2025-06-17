@@ -26,7 +26,7 @@ func NewSmartAVCodecParameters() *SmartAVCodecParameters {
     return w
 }
 
-// Zugriff auf lesbare Felder
+// Access to fields of c-struct
 
 func (w *SmartAVCodecParameters) CodecTag() uint32 {
     return uint32(w.ptr.codec_tag)
@@ -104,13 +104,13 @@ func (w *SmartAVCodecParameters) SeekPreroll() int {
     return int(w.ptr.seek_preroll)
 }
 
-// Optional: get codec name via C-Helper
+// CodecName gets codec name via C-Helper
 func (w *SmartAVCodecParameters) CodecName() string {
     cstr := C.get_codec_name(w.ptr.codec_id)
     return C.GoString(cstr)
 }
 
-// Expose raw pointer falls benötigt
+// Ptr expose raw pointer when needed
 func (w *SmartAVCodecParameters) Ptr() *C.struct_AVCodecParameters {
     return w.ptr
 }

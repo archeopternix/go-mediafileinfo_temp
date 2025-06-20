@@ -180,6 +180,10 @@ int LoadOSThumbnailJPEGBuffer(const char* filePath, int width, int height, unsig
 #endif
 }
 
+void free_thumbnail_buffer(uint8_t* buf) {
+    free(buf);
+}
+
 // Example main for testing
 #ifdef TEST_OS_THUMBNAIL
 int main(int argc, char** argv) {
